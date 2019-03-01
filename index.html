@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DỊCH VU THUÊ XE 2</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<style >
+		body{
+			background-image: url('./img/bmw1.jpeg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.content{
+			background-color: white;
+			margin: auto;
+			margin: 200px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<div class="content">
+				<div class="container">
+	<div class="container">
+		<div class="ten-he-thong">DỊCH VỤ THUÊ XE KHÁCH SẠN</div>
+		<div class="search">
+			<div style="margin-bottom: 20px;">Tìm kiếm thông tin khách hàng</div>
+			<center>
+				<input id="input" type="text" placeholder="Nhập số chứng minh hoặc số phòng " name="tim-kiem"> <br>
+				<div class="btn">
+					<button id="btn-search"><i class="fas fa-search"></i> TÌM</button>
+					<button id="btn-delete"><i class="fas fa-times-circle"></i> XÓA</button>
+				</div>
+				<div id="thong-bao">* Không tìm thấy khách hàng</div>
+			</center>
+		</div>
+		<div class="info-khach">
+			<table>
+				<tr>
+					<td class="trai">họ và tên: </td>
+					<td class="phai" id="hovaten"></td>
+				</tr>
+				<tr>
+					<td class="trai">số CMT: </td>
+					<td class="phai" id="socmt"></td>
+				</tr>
+				<tr>
+					<td class="trai">số phòng: </td>
+					<td class="phai" id="sophong"></td>
+				</tr>
+					<td class="trai">ngày đến: </td>
+					<td class="phai" id="ngayden"></td>
+				</tr>
+					<td class="trai">ngày đi: </td>
+					<td class="phai" id="ngaydi"></td>
+				</tr>
+					<td class="trai">điện thoại: </td>
+					<td class="phai" id="dienthoai"></td>
+				</tr>
+					<td class="trai">email: </td>
+					<td class="phai" id="email"></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<hr>
+		<div class="xe">
+			<div class="info-xe">
+				<center>
+					<fieldset>
+						<legend style="font-size: 20px; margin-bottom: 20px; font-weight: bold;">THÔNG TIN XE</legend>
+						<form>
+							<input id="rdo-oto" type="radio" name="chon-loai-xe">Ô TÔ
+							<input id="rdo-xemay" type="radio" name="chon-loai-xe">XE MÁY
+							<input id="rdo-xedap" type="radio" name="chon-loai-xe">XE ĐẠP
+							<br>
+						</form>
+					</fieldset>
+						
+					<table style="width: 100%; ">
+						<tr>
+							<td class="cot11">Mã xe</td>
+							<td class="cot12">Tên xe</td>
+							<td class="cot13">Năm sản xuất</td>
+							<td class="cot14">Hãng</td>
+							<td class="cot15">Hình ảnh</td>
+							<td class="cot16">Giá/1h</td>
+							<td class="cot17">Chọn xe</td>
+						</tr>
+					</table>
+					<table style="width: 100%;" id="tt-xe">
+					</table>		
+
+					<div class="chon-ngay-thue">
+						<span>Ngày thuê: </span>
+						<input id="ngaythue" type="datetime-local" name="ngay thue">
+						<span>Ngày trả: </span>
+						<input id="ngaytra" type="datetime-local" name="ngay tra">
+					</div>
+					<div class="thanh-toan">
+						<button style="margin-right: 40px;" id="bill">Xem thành tiền</button>
+						<input id="show-bill" type="text" name=""><br>
+						<button style="margin-top: 20px;" id="btn-thue">THUÊ</button>
+					</div>
+				</center>
+
+				
+			</div>
+			<div class="info-thue">
+				<center>
+					<fieldset>
+						<legend style="font-size: 20px; margin-bottom: 20px; font-weight: bold;">THÔNG TIN THUÊ</legend>
+						<br>
+						<form>
+					</fieldset>
+					<table>
+						<tr>
+							<td class="cot11">Mã xe</td>
+							<td class="cot12">Tên xe</td>
+							<td class="cot13">Năm sản xuất</td>
+							<td class="cot14">Hãng</td>
+							<td class="cot15">Hình ảnh</td>
+							<td class="cot16">Giá/1h</td>
+						</tr>
+					</table>
+				</center>
+			</div>
+		</div>
+	</div>
+	</div>
+		</div>
+
+<script type="text/javascript" src="./js/info-customer.js"></script>
+<script type="text/javascript" src="./js/info-xe.js"></script>
+</body>
+</html>

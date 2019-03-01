@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DỊCH VU THUÊ XE 2</title>
+	<link rel="stylesheet" type="text/css" href="./css/style2.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<style >
+		body{
+			background-image: url('./img/bmw1.jpeg');
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		.content{
+			background-color: white;
+			margin: auto;
+			margin: 200px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+	<div class="content">
+		<div class="container">
+			<div class="ten-he-thong">DỊCH VỤ THUÊ XE KHÁCH SẠN</div>
+			<div class="layer2">
+				<div class="container-trai">
+					<div class="search">
+						<fieldset style="margin-top: 20px;">
+							<legend style="font-size: 20px; margin-bottom: 20px; font-weight: bold;	text-align: center;">Tìm kiếm thông tin khách hàng</legend>
+							<center>
+								<input id="input" type="text" placeholder="Nhập số chứng minh hoặc số phòng " name="tim-kiem"> <br>
+								<div class="btn">
+									<button id="btn-search"><i class="fas fa-search"></i> TÌM</button>
+									<button id="btn-delete"><i class="fas fa-times-circle"></i> XÓA</button>
+								</div>
+								<div id="thong-bao">* Không tìm thấy khách hàng</div>
+							</center>
+							<div class="info-khach">
+								<table>
+									<tr>
+										<td class="trai">họ và tên: </td>
+										<td class="phai" id="hovaten"></td>
+									</tr>
+									<tr>
+										<td class="trai">số CMT: </td>
+										<td class="phai" id="socmt"></td>
+									</tr>
+									<tr>
+										<td class="trai">số phòng: </td>
+										<td class="phai" id="sophong"></td>
+									</tr>
+										<td class="trai">ngày đến: </td>
+										<td class="phai" id="ngayden"></td>
+									</tr>
+										<td class="trai">ngày đi: </td>
+										<td class="phai" id="ngaydi"></td>
+									</tr>
+										<td class="trai">điện thoại: </td>
+										<td class="phai" id="dienthoai"></td>
+									</tr>
+										<td class="trai">email: </td>
+										<td class="phai" id="email"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="container-phai">
+					<fieldset style="margin-top: 20px;">
+						<legend style="font-size: 20px; margin-bottom: 20px; font-weight: bold;	text-align:center;">Thông tin xe đã thuê</legend>						
+					</fieldset>
+					<table class="table-thue-xe">
+						<tr>
+							<th class="cot21">CMT</th>
+							<th class="cot22">Mã Xe</th>
+							<th class="cot23">Tên Xe</th>
+							<th class="cot24">Giá</th>
+							<th class="cot25">Ngày thuê</th>
+							<th class="cot26">Ngày trả</th>
+							<th class="cot27">Thành tiền</th>
+						</tr>
+					</table>
+					<table class="table-thue-xe" id="xethue">
+						
+					</table>
+
+				</div>
+			</div>
+			<br>
+			<hr>
+			<div class="info-xe">
+				<div class="table-xe">
+					<fieldset style="margin-top: 20px;">
+						<legend style="font-size: 20px; margin-bottom: 20px; font-weight: bold;">THÔNG TIN XE</legend>
+						<center>
+							<form>
+								<input id="rdo-oto" type="radio" name="chon-loai-xe">Ô TÔ
+								<input id="rdo-xemay" type="radio" name="chon-loai-xe">XE MÁY
+								<input id="rdo-xedap" type="radio" name="chon-loai-xe">XE ĐẠP
+							</form>
+						</center>
+					</fieldset>
+						
+					<table id="title-table" style="width: 100%; ">
+						<tr>
+							<th class="cot11">Mã xe</th>
+							<th class="cot12">Tên xe</th>
+							<th class="cot13">Năm sản xuất</th>
+							<th class="cot14">Hãng</th>
+							<th class="cot15">Hình ảnh</th>
+							<th class="cot16">Giá/1h</th>
+							<th class="cot17">Chọn xe</th>
+						</tr>
+					</table>
+					<table style="width: 100%;" id="tt-xe">
+					</table>
+				</div>
+				<div class="option">
+						<div class="chon-ngay-thue">
+							<span>Ngày thuê: </span>
+							<input style="float: right;" id="ngaythue" type="datetime-local" name="ngay thue">
+							<br>
+							<span style="float: left;">Ngày trả: </span>
+							<input style="float: right;" id="ngaytra" type="datetime-local" name="ngay tra">
+						</div>
+					
+						<div style="margin-top: 40px;" class="thanh-toan">
+							<button id="bill">Xem thành tiền</button>
+							<input style="width: 300px;vertical-align: middle; float: right; border: none; font-size: 20px; font-weight: bold;" id="show-bill" type="text"><br>
+							<button style="margin-top: 20px;" id="btn-thue">THUÊ</button>
+						</div>
+					
+				</div>				
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="./js/info-customer.js"></script>
+<script type="text/javascript" src="./js/info-xe.js"></script>
+<script type="text/javascript" src="./js/info-thue.js"></script>
+<script type="text/javascript">
+</script>
+</body>
+</html>
